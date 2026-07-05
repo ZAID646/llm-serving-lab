@@ -1,9 +1,18 @@
+<div align="center">
+
 # llm-serving-lab
 
-<p align="center">
-  <img src="https://huggingface.co/front/assets/huggingface_logo-noborder.svg" width="32" height="32" alt="HF">
-  <b>AWQ Model:</b> <a href="https://huggingface.co/zaid646/gemma-2-9b-awq">huggingface.co/zaid646/gemma-2-9b-awq</a>
-</p>
+**AWQ-quantized Gemma-2-9B · 75 RPS on RTX 4090 · 200+ concurrent users · full Prometheus/Grafana/Locust stack**
+
+[![HuggingFace Model](https://img.shields.io/badge/HuggingFace-AWQ%20Model-blue?logo=huggingface&logoColor=white)](https://huggingface.co/zaid646/gemma-2-9b-awq)
+[![Python 3.11+](https://img.shields.io/badge/python-3.11%2B-blue?logo=python&logoColor=white)](https://python.org)
+[![Apache 2.0](https://img.shields.io/badge/license-Apache%202.0-green)](LICENSE)
+[![vLLM](https://img.shields.io/badge/vLLM-0.24.0-4A90D9?logo=nvidia&logoColor=white)](https://github.com/vllm-project/vllm)
+[![Docker](https://img.shields.io/badge/docker-compose-2496ED?logo=docker&logoColor=white)](docker-compose.yml)
+[![Code style: ruff](https://img.shields.io/badge/code%20style-ruff-000000)](https://github.com/astral-sh/ruff)
+[![PRs Welcome](https://img.shields.io/badge/PRs-welcome-brightgreen)](https://github.com/ZAID646/llm-serving-lab/pulls)
+
+</div>
 
 **One AWQ quantization pass turned ~5 concurrent users into ~5000, and 1.5 RPS into 75 RPS. That's a 40x throughput gain and unlimited concurrency ceiling on the same single RTX 4090 — from model compression alone. No additional hardware.**
 

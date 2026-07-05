@@ -1,0 +1,54 @@
+# HorizontalPodAutoscaler for LLM inference.
+# Scales on queue depth (vllm:num_requests_waiting) rather than CPU%
+# because LLM serving is memory-bandwidth-bound, not compute-bound.
+#
+# Prerequisites:
+#   - prometheus-adapter installed in cluster
+#   - Custom metric vllm:num_requests_waiting exported by Prometheus
+#     from vLLM's /metrics endpoint
+#
+# prometheus-adapter config (values.yaml):
+#   rules:
+#     default: false
+#     custom:
+#       - seriesQuery: 'vllm:num_requests_waiting'
+#         resources:
+#           overrides:
+#             namespace: {resource: "namespace"}
+#             pod: {resource: "pod"}
+#         name:
+#           matches: "vllm:num_requests_waiting"
+#         metricsQuery: 'avg(vllm:num_requests_waiting{<<.LabelMatchers>>}) by (<<.GroupBy>>)'
+---
+apiVersion: autoscaling/v2
+kind: HorizontalPodAutoscaler
+metadata:
+  name: vllm-hpa
+spec:
+  scaleTargetRef:
+    apiVersion: apps/v1
+    kind: Deployment
+    name: vllm
+  minReplicas: 1
+  maxReplicas: 10
+  metrics:
+    - type: Pods
+      pods:
+        metric:
+          name: vllm_num_requests_waiting
+        target:
+          type: AverageValue
+          averageValue: 50  # Scale up when >50 requests are queued per pod
+  behavior:
+    scaleUp:
+      stabilizationWindowSeconds: 30
+      policies:
+        - type: Pods
+          value: 2
+          periodSeconds: 15
+    scaleDown:
+      stabilizationWindowSeconds: 120
+      policies:
+        - type: Pods
+          value: 1
+          periodSeconds: 30

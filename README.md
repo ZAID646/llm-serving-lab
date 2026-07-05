@@ -1,5 +1,10 @@
 # llm-serving-lab
 
+<p align="center">
+  <img src="https://huggingface.co/front/assets/huggingface_logo-noborder.svg" width="32" height="32" alt="HF">
+  <b>AWQ Model:</b> <a href="https://huggingface.co/zaid646/gemma-2-9b-awq">huggingface.co/zaid646/gemma-2-9b-awq</a>
+</p>
+
 **One AWQ quantization pass turned ~5 concurrent users into ~5000, and 1.5 RPS into 75 RPS. That's a 40x throughput gain and unlimited concurrency ceiling on the same single RTX 4090 — from model compression alone. No additional hardware.**
 
 This is a complete, battle-tested, production-grade LLM serving pipeline: AWQ-quantized Gemma-2-9B with Prometheus/Grafana telemetry, Locust distributed load testing, and a K3s HPA manifest keyed to queue depth. Built on Vast.ai, designed to run anywhere.
@@ -501,4 +506,4 @@ If you found this useful, star the repo. If you found a bug, open an issue — P
 
 ## License
 
-The code in this repository is MIT licensed. The model weights (`zaid646/gemma-2-9b-awq`) are derived from Google's Gemma-2-9B and inherit the Gemma license terms.
+The code in this repository is Apache 2.0 licensed. See [LICENSE](LICENSE) for details. The model weights (`zaid646/gemma-2-9b-awq`) are derived from Google's Gemma-2-9B and inherit the Gemma license terms.

@@ -6,6 +6,28 @@ This is a complete, battle-tested, production-grade LLM serving pipeline: AWQ-qu
 
 ---
 
+## Table of Contents
+
+- [What this is](#what-this-is)
+- [Architecture](#architecture)
+- [Performance: The Charts](#performance-the-charts)
+- [Full Load Test Results](#full-load-test-results)
+- [Understanding the Bottleneck](#understanding-the-bottleneck)
+- [Cost Economics](#cost-economics)
+- [Quantization Pipeline](#quantization-pipeline)
+- [Bugs I hit so you do not have to](#bugs-i-hit-so-you-do-not-have-to)
+- [How to Run](#how-to-run)
+- [Project Structure](#project-structure)
+- [Grafana Dashboard](#grafana-dashboard)
+- [K3s / Kubernetes Autoscaling](#k3s--kubernetes-autoscaling)
+- [Why AWQ Instead of Alternatives](#why-awq-instead-of-alternatives)
+- [Known Limitations](#known-limitations)
+- [Roadmap](#roadmap)
+- [Who built this](#who-built-this)
+- [License](#license)
+
+---
+
 ## What this is
 
 This is not a tutorial. This is the artifacts and findings from stress-testing a real LLM serving stack to its breaking point on consumer hardware, then backing off one step. Every number in this README was measured live — no cherry-picking, no simulation, no "theoretical peak" nonsense.

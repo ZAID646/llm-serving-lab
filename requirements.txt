@@ -1,0 +1,19 @@
+# Core inference & serving
+vllm>=0.24.0
+torch>=2.4.0
+transformers>=4.45.0
+
+# Quantization (see docker/quantize/ for containerized env)
+# llmcompressor==0.12.1a20260701
+# huggingface-hub>=0.26.0
+# datasets>=3.0.0
+
+# Load testing (see docker/locust/ for containerized env)
+# locust~=2.32
+# requests~=2.32
+
+# Monitoring
+prometheus-client>=0.20.0
+
+# Development
+ruff>=0.6.0

@@ -507,7 +507,7 @@ I focus on making LLMs actually work in production — not just run in a Jupyter
 
 - GitHub: [github.com/zaid646](https://github.com/zaid646)
 - HuggingFace: [huggingface.co/zaid646](https://huggingface.co/zaid646)
-- Portfolio: (https://zaid646.vercel.app)
+- Portfolio: https://zaid646.vercel.app
 
 If you found this useful, star the repo. If you found a bug, open an issue — PRs are even better.
 

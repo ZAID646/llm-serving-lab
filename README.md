@@ -501,13 +501,13 @@ For this to work, Prometheus needs to expose vLLM metrics via the Prometheus Ada
 
 ## Who built this
 
-**Mohammed Zaid Hussain** — Gen AI Infrastructure Engineer.
+**Mohammed Zaid Hussain** — ML System Engineer.
 
-I focus on making LLMs actually work in production — not just run in a Jupyter notebook. 11+ merged OSS PRs across vLLM, HuggingFace transformers, diffusers, accelerate, and openai-python.
+I focus on making LLMs actually work in production — not just run in a Jupyter notebook. 10+ submitted OSS PRs across vLLM, HuggingFace transformers, diffusers, accelerate, and openai-python.
 
-- GitHub: [github.com/ZAID646](https://github.com/ZAID646)
+- GitHub: [github.com/zaid646](https://github.com/zaid646)
 - HuggingFace: [huggingface.co/zaid646](https://huggingface.co/zaid646)
-- Portfolio: [github.com/ZAID646/portfolio](https://github.com/ZAID646/portfolio)
+- Portfolio: (https://zaid646.vercel.app)
 
 If you found this useful, star the repo. If you found a bug, open an issue — PRs are even better.
 
